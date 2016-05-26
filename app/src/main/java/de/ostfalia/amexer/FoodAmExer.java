@@ -41,11 +41,11 @@ public class FoodAmExer extends AppCompatActivity {
 
     /* Activity Objects */
     private ImageButton solferinoButton;
-    private EditText solferinoBigText;
-    private EditText solferinoSmallText;
+    private TextView solferinoBigText;
+    private TextView solferinoSmallText;
     private ImageButton limesButton;
-    private EditText limesSmallText;
-    private EditText limesBigText;
+    private TextView limesSmallText;
+    private TextView limesBigText;
 
     Context context;
 
@@ -55,7 +55,7 @@ public class FoodAmExer extends AppCompatActivity {
         getOpenHoursFromCSV();
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food_am_exer);
+        setContentView(R.layout.activity_food_exer);
         context = this;
 
         setImageActionBar();
@@ -105,21 +105,21 @@ public class FoodAmExer extends AppCompatActivity {
             if (currentHour >= solferinoOpenHour && currentHour < solferinoCloseHour) {
                 solferinoBigText.setText(R.string.open, TextView.BufferType.EDITABLE);
                 solferinoBigText.setTextColor(Color.GREEN);
-                solferinoSmallText.setText(getString(R.string.offen_bis) + solferinoCloseHour + getString(R.string.zero_minute));
+                solferinoSmallText.setText(getString(R.string.offen_bis) + " " + solferinoCloseHour + getString(R.string.zero_minute));
             } else {
                 solferinoBigText.setText(R.string.closed, TextView.BufferType.EDITABLE);
                 solferinoBigText.setTextColor(Color.RED);
-                solferinoSmallText.setText(getString(R.string.wir_sehen_uns) + solferinoOpenHour + getString(R.string.zero_minute));
+                solferinoSmallText.setText(getString(R.string.wir_sehen_uns) + " " + solferinoOpenHour + getString(R.string.zero_minute));
             }
 
             if (currentHour >= limesOpenHour && currentHour < limesCloseHour) {
                 limesBigText.setText(R.string.open, TextView.BufferType.EDITABLE);
                 limesBigText.setTextColor(Color.GREEN);
-                limesSmallText.setText(getString(R.string.offen_bis) + limesCloseHour + getString(R.string.zero_minute));
+                limesSmallText.setText(getString(R.string.offen_bis) + " " + limesCloseHour + getString(R.string.zero_minute));
             } else {
                 limesBigText.setText(R.string.closed, TextView.BufferType.EDITABLE);
                 limesBigText.setTextColor(Color.RED);
-                limesSmallText.setText(getString(R.string.wir_sehen_uns) + limesOpenHour + getString(R.string.zero_minute));
+                limesSmallText.setText(getString(R.string.wir_sehen_uns) + " " + limesOpenHour + getString(R.string.zero_minute));
             }
         }
     }
@@ -128,13 +128,13 @@ public class FoodAmExer extends AppCompatActivity {
      * Initialize Activity Objects
      */
     private void initActivityObjects() {
-        solferinoBigText = (EditText) findViewById(R.id.solferino_text);
-        solferinoSmallText = (EditText) findViewById(R.id.solferino_time);
-        solferinoButton = (ImageButton) findViewById(R.id.solferino_button);
+        solferinoBigText = (TextView) findViewById(R.id.solferino_state);
+        solferinoSmallText = (TextView) findViewById(R.id.solferino_text);
+        solferinoButton = (ImageButton) findViewById(R.id.solferino_image);
 
-        limesBigText = (EditText) findViewById(R.id.limes_text);
-        limesSmallText = (EditText) findViewById(R.id.limes_time);
-        limesButton = (ImageButton) findViewById(R.id.limes_button);
+        limesBigText = (TextView) findViewById(R.id.limes_state);
+        limesSmallText = (TextView) findViewById(R.id.limes_text);
+        limesButton = (ImageButton) findViewById(R.id.limes_image);
     }
 
     /**
@@ -145,8 +145,7 @@ public class FoodAmExer extends AppCompatActivity {
         solferinoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //don't export this url!
-                Uri uri = Uri.parse("http://www.kv.drk-kv-wf.de/fileadmin/user_upload/aktuelles/speisepl%C3%A4ne/menu-solferino.pdf");
+                Uri uri = Uri.parse(getString(R.string.solferino_url));
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }

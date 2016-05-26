@@ -97,5 +97,6 @@
     <string name="career_service">https://www.ostfalia.de/cms/de/career</string>
     <string name="immatrikulations_buero">https://www.ostfalia.de/cms/de/ssc/immatrikulation/?nav2=true</string>
     <string name="international_office">https://www.ostfalia.de/cms/de/international/internationales_Buero_-_student_office</string>
+    <string name="solferino_url">http://www.kv.drk-kv-wf.de/fileadmin/user_upload/aktuelles/speisepläne/menu-solferino.pdf</string>
 
 </resources>

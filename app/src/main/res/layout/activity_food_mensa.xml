@@ -95,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/mensa_text"
-        android:textColor="#2ca61f"
+        android:textColor="@color/ostfaliaGreen"
         android:gravity="center"
         android:background="#ffffff"
         android:layout_alignTop="@+id/mensa_state"

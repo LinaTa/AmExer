@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top"
+        android:background="@color/backgroundOstfalia">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left">
+
+                    <ImageButton
+                        android:layout_width="150dp"
+                        android:layout_height="124dp"
+                        android:id="@+id/solferino_image"
+                        android:background="@mipmap/solferino"
+                        android:clickable="true"
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        android:layout_gravity="left|center_vertical"
+                        android:adjustViewBounds="false"
+                        android:layout_below="@+id/space2"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:scaleType="fitXY"
+                        android:layout_weight="0.40" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/solferino_state"
+                        android:text="OPEN"
+                        android:gravity="center"
+                        android:layout_weight="0.70"
+                        android:layout_gravity="top"
+                        android:textColor="@color/ostfaliaGreen"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/solferino_text"
+                        android:text="till 16:00"
+                        android:gravity="top|center"
+                        android:layout_weight="0.30"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left">
+
+                    <ImageButton
+                        android:layout_width="150dp"
+                        android:layout_height="124dp"
+                        android:id="@+id/limes_image"
+                        android:background="@mipmap/limes3"
+                        android:clickable="true"
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        android:layout_gravity="left|center_vertical"
+                        android:adjustViewBounds="false"
+                        android:layout_below="@+id/space"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:scaleType="fitXY" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/limes_state"
+                        android:gravity="center"
+                        android:layout_gravity="top"
+                        android:layout_weight="0.70"
+                        android:text="CLOSE"
+                        android:textColor="@color/ostfaliaRed"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/limes_text"
+                        android:layout_weight="0.30"
+                        android:text="See you tommorow at 9:00"
+                        android:gravity="top|center"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
