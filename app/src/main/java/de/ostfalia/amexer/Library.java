@@ -169,7 +169,7 @@ public class Library extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        /* helper class for */
+        /* helper class for table */
         TableHelper tableHelper = new TableHelper();
         /* Prepares the current library open-time-range  */
         ArrayList<Integer> openHours = tableHelper.prepareTime(rowTime); // [openHour, openMinute, closeHour, closeMinute]

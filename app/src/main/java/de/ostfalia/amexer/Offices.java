@@ -71,7 +71,7 @@ public class Offices extends AppCompatActivity {
         internationalOffice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.ostfalia.de/cms/de/international/internationales_Buero_-_student_office");
+                Uri uri = Uri.parse(getString(R.string.international_office));
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
@@ -80,7 +80,7 @@ public class Offices extends AppCompatActivity {
         immatrikulationsbuero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.ostfalia.de/cms/de/ssc/immatrikulation/?nav2=true");
+                Uri uri = Uri.parse(getString(R.string.immatrikulations_buero));
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
@@ -89,7 +89,7 @@ public class Offices extends AppCompatActivity {
         careerService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.ostfalia.de/cms/de/career");
+                Uri uri = Uri.parse(getString(R.string.career_service));
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
@@ -98,7 +98,7 @@ public class Offices extends AppCompatActivity {
         serviceBueros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.ostfalia.de/cms/de/ssc/servicebueros/");
+                Uri uri = Uri.parse(getString(R.string.service_bueros));
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
@@ -107,7 +107,7 @@ public class Offices extends AppCompatActivity {
         studienfoerderung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.ostfalia.de/cms/de/stipendien");
+                Uri uri = Uri.parse(getString(R.string.studienforderung));
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
@@ -116,7 +116,7 @@ public class Offices extends AppCompatActivity {
         studienberatung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.ostfalia.de/cms/de/studienberatung/");
+                Uri uri = Uri.parse(getString(R.string.studienberatung));
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }

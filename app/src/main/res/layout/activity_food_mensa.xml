@@ -38,7 +38,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/solferino_state"
+        android:id="@+id/mensa_state"
         android:focusable="false"
         android:enabled="false"
         android:elegantTextHeight="false"
@@ -49,17 +49,17 @@
         android:layout_column="1"
         android:inputType="none"
         android:background="#ffffff"
-        android:layout_alignBottom="@+id/solferino_button"
+        android:layout_alignBottom="@+id/mensa_button"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/solferino_button" />
+        android:layout_alignTop="@+id/mensa_button" />
 
     <ImageButton
         android:layout_width="150dp"
         android:layout_height="124dp"
-        android:id="@+id/solferino_button"
+        android:id="@+id/mensa_button"
         android:background="@mipmap/mensa1"
         android:clickable="true"
         android:layout_column="0"
@@ -85,24 +85,24 @@
         android:layout_gravity="right|bottom"
         android:textIsSelectable="false"
         android:background="#ffffff"
-        android:layout_alignBottom="@+id/solferino_state"
-        android:layout_toRightOf="@+id/solferino_button"
+        android:layout_alignBottom="@+id/mensa_state"
+        android:layout_toRightOf="@+id/mensa_button"
         android:layout_marginBottom="19dp"
-        android:layout_alignRight="@+id/solferino_state"
-        android:layout_alignEnd="@+id/solferino_state" />
+        android:layout_alignRight="@+id/mensa_state"
+        android:layout_alignEnd="@+id/mensa_state" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/mensa_text"
-        android:textColor="#2ca61f"
+        android:textColor="@color/ostfaliaGreen"
         android:gravity="center"
         android:background="#ffffff"
-        android:layout_alignTop="@+id/solferino_state"
-        android:layout_toRightOf="@+id/solferino_button"
+        android:layout_alignTop="@+id/mensa_state"
+        android:layout_toRightOf="@+id/mensa_button"
         android:layout_above="@+id/mensa_time"
-        android:layout_alignRight="@+id/solferino_state"
-        android:layout_alignEnd="@+id/solferino_state"
+        android:layout_alignRight="@+id/mensa_state"
+        android:layout_alignEnd="@+id/mensa_state"
         android:textSize="20dp"
 
 
@@ -115,11 +115,11 @@
     <Space
         android:layout_width="20px"
         android:layout_height="20px"
-        android:layout_below="@+id/solferino_state"
+        android:layout_below="@+id/mensa_state"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/solferino_state"
-        android:layout_alignEnd="@+id/solferino_state"
+        android:layout_alignRight="@+id/mensa_state"
+        android:layout_alignEnd="@+id/mensa_state"
         android:id="@+id/space" />
 
 </RelativeLayout>

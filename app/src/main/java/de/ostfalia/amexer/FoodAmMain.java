@@ -1,4 +1,5 @@
 package de.ostfalia.amexer;
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 import de.ostfalia.amexer.entries.CSVReader;
+
 /**
  * This class uses a CSV-File 'mensa_data.csv' to get the open and close time from the Mensa.
  * After the Activity starts, the CVS-File will be loaded. The class gets the current
@@ -26,13 +28,9 @@ import de.ostfalia.amexer.entries.CSVReader;
  * The class compares the mensa open and close time with the current time.
  * If current time is in Time-Range the library is "OFFEN" else "GRESCHLOSSEN"
  *
- * @autor Natasza Szczypien
+ * @author Natasza Szczypien
  */
 public class FoodAmMain extends AppCompatActivity {
-
-    /*Constants tells the line index in the CSV */
-    private final int MENSA_OPEN_TIME_CSV = 0;
-    private final int MENSA_CLOSE_TIME_CSV = 1;
 
     private int mensaOpenHour;
     private int mensaCloseHour;
@@ -47,19 +45,11 @@ public class FoodAmMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        InputStream iS = null;
-        // Reads CSV
-        try {
-            iS = this.getAssets().open(getString(R.string.mensa_csv));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        getOpenHoursFromCSV(iS);
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food_am_main);
+        setContentView(R.layout.activity_food_mensa);
         context = this;
 
+        getOpenHoursFromCSV();
         setImageActionBar();
         initActivityObjects();
         setButtonAction();
@@ -91,24 +81,24 @@ public class FoodAmMain extends AppCompatActivity {
 
         int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 
-        if(dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY){
+        if (dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY) {
 
             mensaBigText.setText(R.string.wochenende);
             mensaBigText.setTextColor(Color.BLUE);
             mensaSmallText.setText(R.string.frei);
 
-        }else {
+        } else {
 
-            int currentHour =  c.get(Calendar.HOUR_OF_DAY);
+            int currentHour = c.get(Calendar.HOUR_OF_DAY);
 
-            if(currentHour >= mensaOpenHour && currentHour <= mensaCloseHour){
-                mensaBigText.setText( getString(R.string.open), TextView.BufferType.EDITABLE);
+            if (currentHour >= mensaOpenHour && currentHour <= mensaCloseHour) {
+                mensaBigText.setText(getString(R.string.open), TextView.BufferType.EDITABLE);
                 mensaBigText.setTextColor(Color.GREEN);
-                mensaSmallText.setText(getString(R.string.offen_bis) + mensaCloseHour + getString(R.string.zero_minute));
+                mensaSmallText.setText(getString(R.string.offen_bis)  + " " + mensaCloseHour + getString(R.string.zero_minute));
             } else {
                 mensaBigText.setText(getString(R.string.closed), TextView.BufferType.EDITABLE);
                 mensaBigText.setTextColor(Color.RED);
-                mensaSmallText.setText(getString(R.string.wir_sehen_uns) + mensaOpenHour + getString(R.string.zero_minute));
+                mensaSmallText.setText(getString(R.string.wir_sehen_uns) +" "+ mensaOpenHour + getString(R.string.zero_minute));
             }
         }
     }
@@ -119,11 +109,11 @@ public class FoodAmMain extends AppCompatActivity {
     private void initActivityObjects() {
         mensaBigText = (EditText) this.findViewById(R.id.mensa_text);
         mensaSmallText = (EditText) this.findViewById(R.id.mensa_time);
-        mensaButton = (ImageButton) this.findViewById(R.id.solferino_button);
+        mensaButton = (ImageButton) this.findViewById(R.id.mensa_button);
     }
 
     /**
-     *  When the Image will be clicked, than a Browser with the Restaurant menu will be openned.
+     * When the Image will be clicked, than a Browser with the Restaurant menu will be openned.
      */
     private void setButtonAction() {
         mensaButton.setOnClickListener(new View.OnClickListener() {
@@ -139,11 +129,24 @@ public class FoodAmMain extends AppCompatActivity {
     /**
      * Gets the openning and closing times from a CSV File and assings it to
      * private variables.
-     * @param iS
+     *
      */
-    private void getOpenHoursFromCSV(InputStream iS) {
+    private void getOpenHoursFromCSV() {
+
+        InputStream iS = null;
+        // Reads CSV
+        try {
+            iS = this.getAssets().open(getString(R.string.mensa_csv));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        /*Constants tells what the line index in the CSV means */
+        int MENSA_OPEN_TIME_CSV = 0;
+        int MENSA_CLOSE_TIME_CSV = 1;
 
         ArrayList<String> hoursInString = new ArrayList<>(new CSVReader(iS).getData());
+
         mensaOpenHour = Integer.parseInt(hoursInString.get(MENSA_OPEN_TIME_CSV));
         mensaCloseHour = Integer.parseInt(hoursInString.get(MENSA_CLOSE_TIME_CSV));
     }

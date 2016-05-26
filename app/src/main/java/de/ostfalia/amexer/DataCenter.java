@@ -19,7 +19,7 @@ import de.ostfalia.amexer.entries.TableHelper;
  * the open-time-range for TODAY and compares it with the current time.
  * If current time is in Time-Range the library is "OFFEN" else "GRESCHLOSSEN"
  *
- * @autor Natasza Szczypien
+ * @author Natasza Szczypien
  */
 public class DataCenter extends AppCompatActivity {
 
