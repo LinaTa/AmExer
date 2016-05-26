@@ -94,8 +94,7 @@ public class ProfsSocialWork extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
                 String tel = profsList.get(position);
                 tel = tel.split(" - ")[2];
-
-                Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse(String.valueOf(R.string.tel) + tel));
+                Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse(getString(R.string.tel) + tel));
                 startActivity(callIntent);
             }
         });
