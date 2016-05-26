@@ -91,5 +91,11 @@
     <!--   ......................... SPORTS ......................... -->
     <string name="sports_data.csv">sports_data.csv</string>
     <string name="sportsLink">https://www.hochschulsport.ostfalia.de/angebote/aktueller_zeitraum/_</string>
+    <string name="studienberatung">https://www.ostfalia.de/cms/de/studienberatung</string>
+    <string name="studienforderung">https://www.ostfalia.de/cms/de/stipendien</string>
+    <string name="service_bueros">https://www.ostfalia.de/cms/de/ssc/servicebueros/</string>
+    <string name="career_service">https://www.ostfalia.de/cms/de/career</string>
+    <string name="immatrikulations_buero">https://www.ostfalia.de/cms/de/ssc/immatrikulation/?nav2=true</string>
+    <string name="international_office">https://www.ostfalia.de/cms/de/international/internationales_Buero_-_student_office</string>
 
 </resources>
