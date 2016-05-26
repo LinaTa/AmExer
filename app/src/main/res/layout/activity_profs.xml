@@ -1,125 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="0dp"
-    android:paddingLeft="0dp"
-    android:paddingRight="0dp"
-    android:paddingTop="0dp"
     tools:context=".Profs"
     android:background="@color/white">
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_profs_informatik"
-        android:background="@color/wolfenbuettelBlue"
-        android:text="@string/profs"
-        android:focusable="false"
-        android:textColor="#ffffff"
-        android:inputType="none"
-        android:gravity="center"
-        android:layout_gravity="left|top"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:orientation="vertical" >
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/editText_profs_informatik">
-
-        <Button
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button_electrical_engineering"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/round_shape"
+            android:id="@+id/editText_profs_informatik"
+            android:background="@color/wolfenbuettelBlue"
+            android:text="@string/profs"
+            android:focusable="false"
             android:textColor="#ffffff"
-            android:textStyle="normal"
-            android:width="200dp"
-            android:clickable="true"
-            android:focusableInTouchMode="false"
-            android:height="60dp"
-            android:layout_margin="10dp"
-            android:text="@string/electrical_engineering" />
+            android:inputType="none"
+            android:gravity="center"
+            android:layout_gravity="left|top" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/informatik"
-            android:id="@+id/button_informatik"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/round_shape"
-            android:textColor="#ffffff"
-            android:textStyle="normal"
-            android:width="200dp"
-            android:clickable="true"
-            android:focusableInTouchMode="false"
-            android:height="60dp"
-            android:layout_margin="10dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/machine_engineering"
-            android:id="@+id/button_machine_engineering"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/round_shape"
-            android:textColor="#ffffff"
-            android:textStyle="normal"
-            android:width="200dp"
-            android:clickable="true"
-            android:focusableInTouchMode="false"
-            android:height="60dp"
-            android:layout_margin="10dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_electrical_engineering"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/round_shape"
+                android:textColor="#ffffff"
+                android:textStyle="normal"
+                android:width="200dp"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:height="60dp"
+                android:layout_margin="10dp"
+                android:text="@string/electrical_engineering" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/law"
-            android:id="@+id/button_law"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/round_shape"
-            android:textColor="#ffffff"
-            android:textStyle="normal"
-            android:width="200dp"
-            android:clickable="true"
-            android:focusableInTouchMode="false"
-            android:height="60dp"
-            android:layout_margin="10dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/informatik"
+                android:id="@+id/button_informatik"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/round_shape"
+                android:textColor="#ffffff"
+                android:textStyle="normal"
+                android:width="200dp"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:height="60dp"
+                android:layout_margin="10dp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/social_work"
-            android:id="@+id/button_social_work"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/round_shape"
-            android:textColor="#ffffff"
-            android:textStyle="normal"
-            android:width="200dp"
-            android:clickable="true"
-            android:focusableInTouchMode="false"
-            android:height="60dp"
-            android:layout_margin="10dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/machine_engineering"
+                android:id="@+id/button_machine_engineering"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/round_shape"
+                android:textColor="#ffffff"
+                android:textStyle="normal"
+                android:width="200dp"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:height="60dp"
+                android:layout_margin="10dp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/supply_engineering"
-            android:id="@+id/button_supply_engineering"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/round_shape"
-            android:textColor="#ffffff"
-            android:textStyle="normal"
-            android:width="200dp"
-            android:clickable="true"
-            android:focusableInTouchMode="false"
-            android:height="60dp"
-            android:layout_margin="10dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/law"
+                android:id="@+id/button_law"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/round_shape"
+                android:textColor="#ffffff"
+                android:textStyle="normal"
+                android:width="200dp"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:height="60dp"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/social_work"
+                android:id="@+id/button_social_work"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/round_shape"
+                android:textColor="#ffffff"
+                android:textStyle="normal"
+                android:width="200dp"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:height="60dp"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/supply_engineering"
+                android:id="@+id/button_supply_engineering"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/round_shape"
+                android:textColor="#ffffff"
+                android:textStyle="normal"
+                android:width="200dp"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:height="60dp"
+                android:layout_margin="10dp" />
+        </LinearLayout>
     </LinearLayout>
-
-</RelativeLayout>
+</ScrollView>
