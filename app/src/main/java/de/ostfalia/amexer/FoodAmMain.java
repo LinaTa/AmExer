@@ -46,7 +46,7 @@ public class FoodAmMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food_am_main);
+        setContentView(R.layout.activity_food_mensa);
         context = this;
 
         getOpenHoursFromCSV();
@@ -109,7 +109,7 @@ public class FoodAmMain extends AppCompatActivity {
     private void initActivityObjects() {
         mensaBigText = (EditText) this.findViewById(R.id.mensa_text);
         mensaSmallText = (EditText) this.findViewById(R.id.mensa_time);
-        mensaButton = (ImageButton) this.findViewById(R.id.solferino_button);
+        mensaButton = (ImageButton) this.findViewById(R.id.mensa_button);
     }
 
     /**
