@@ -64,7 +64,7 @@
 
     <!--   ......................... HOLIDAYS  ......................... -->
     <string name="semesterBreak">Vorlesungsfrei</string>
-    <string name="lectureTime">Kein vorlesungsfrei</string>
+    <string name="lectureTime">Vorlesungen finden statt</string>
     <string name="holiday">Feiertag</string>
     <string name="date">Datum</string>
     <string name="holidays_data.csv">holidays_data.csv</string>
