@@ -96,32 +96,42 @@ public class DataCenter extends AppCompatActivity {
                 switch (dayType) {
                     case Calendar.MONDAY:
                         dayRow1 = (TextView) findViewById(R.id.Mo_Re1);
+                        assert dayRow1 != null;
                         rowTime1 = dayRow1.getText().toString();
                         dayRow2 = (TextView) findViewById(R.id.Mo_Re2);
+                        assert dayRow2 != null;
                         rowTime2 = dayRow2.getText().toString();
                         break;
                     case Calendar.TUESDAY:
                         dayRow1 = (TextView) findViewById(R.id.Tue_Re1);
+                        assert dayRow1 != null;
                         rowTime1 = dayRow1.getText().toString();
                         dayRow2 = (TextView) findViewById(R.id.Tue_Re2);
+                        assert dayRow2 != null;
                         rowTime2 = dayRow2.getText().toString();
                         break;
                     case Calendar.WEDNESDAY:
                         dayRow1 = (TextView) findViewById(R.id.We_Re1);
+                        assert dayRow1 != null;
                         rowTime1 = dayRow1.getText().toString();
                         dayRow2 = (TextView) findViewById(R.id.We_Re2);
+                        assert dayRow2 != null;
                         rowTime2 = dayRow2.getText().toString();
                         break;
                     case Calendar.THURSDAY:
                         dayRow1 = (TextView) findViewById(R.id.Thu_Re1);
+                        assert dayRow1 != null;
                         rowTime1 = dayRow1.getText().toString();
                         dayRow2 = (TextView) findViewById(R.id.Thu_Re2);
+                        assert dayRow2 != null;
                         rowTime2 = dayRow2.getText().toString();
                         break;
                     case Calendar.FRIDAY:
                         dayRow1 = (TextView) findViewById(R.id.Fr_Re1);
+                        assert dayRow1 != null;
                         rowTime1 = dayRow1.getText().toString();
                         dayRow2 = (TextView) findViewById(R.id.Fr_Re2);
+                        assert dayRow2 != null;
                         rowTime2 = dayRow2.getText().toString();
                         break;
                 }

@@ -9,7 +9,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -36,8 +35,8 @@ public class FoodAmMain extends AppCompatActivity {
     private int mensaCloseHour;
 
     /* Activity Objects */
-    private EditText mensaBigText;
-    private EditText mensaSmallText;
+    private TextView mensaBigText;
+    private TextView mensaSmallText;
     private ImageButton mensaButton;
 
     Context context;
@@ -54,7 +53,6 @@ public class FoodAmMain extends AppCompatActivity {
         initActivityObjects();
         setButtonAction();
         setAvailibility();
-
     }
 
     /**
@@ -107,8 +105,8 @@ public class FoodAmMain extends AppCompatActivity {
      * Initialize Activity Objects
      */
     private void initActivityObjects() {
-        mensaBigText = (EditText) this.findViewById(R.id.mensa_text);
-        mensaSmallText = (EditText) this.findViewById(R.id.mensa_time);
+        mensaBigText = (TextView) this.findViewById(R.id.mensa_text);
+        mensaSmallText = (TextView) this.findViewById(R.id.mensa_time);
         mensaButton = (ImageButton) this.findViewById(R.id.mensa_button);
     }
 

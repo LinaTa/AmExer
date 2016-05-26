@@ -119,22 +119,27 @@ public class Library extends AppCompatActivity {
                 switch (dayType) {
                     case Calendar.MONDAY:
                         dayRow = (TextView) findViewById(R.id.Mo_Se);
+                        assert dayRow != null;
                         rowTime = dayRow.getText().toString();
                         break;
                     case Calendar.TUESDAY:
                         dayRow = (TextView) findViewById(R.id.Tue_Se);
+                        assert dayRow != null;
                         rowTime = dayRow.getText().toString();
                         break;
                     case Calendar.WEDNESDAY:
                         dayRow = (TextView) findViewById(R.id.We_Se);
+                        assert dayRow != null;
                         rowTime = dayRow.getText().toString();
                         break;
                     case Calendar.THURSDAY:
                         dayRow = (TextView) findViewById(R.id.Thu_Se);
+                        assert dayRow != null;
                         rowTime = dayRow.getText().toString();
                         break;
                     case Calendar.FRIDAY:
                         dayRow = (TextView) findViewById(R.id.Fr_Se);
+                        assert dayRow != null;
                         rowTime = dayRow.getText().toString();
                         break;
                 }
@@ -144,22 +149,27 @@ public class Library extends AppCompatActivity {
 
                     case Calendar.MONDAY:
                         dayRow = (TextView) findViewById(R.id.Mo_Vf);
+                        assert dayRow != null;
                         rowTime = dayRow.getText().toString();
                         break;
                     case Calendar.TUESDAY:
                         dayRow = (TextView) findViewById(R.id.Tue_Vf);
+                        assert dayRow != null;
                         rowTime = dayRow.getText().toString();
                         break;
                     case Calendar.WEDNESDAY:
                         dayRow = (TextView) findViewById(R.id.We_Vf);
+                        assert dayRow != null;
                         rowTime = dayRow.getText().toString();
                         break;
                     case Calendar.THURSDAY:
                         dayRow = (TextView) findViewById(R.id.Thu_Vf);
+                        assert dayRow != null;
                         rowTime = dayRow.getText().toString();
                         break;
                     case Calendar.FRIDAY:
                         dayRow = (TextView) findViewById(R.id.Fr_Vf);
+                        assert dayRow != null;
                         rowTime = dayRow.getText().toString();
                         break;
                 }
