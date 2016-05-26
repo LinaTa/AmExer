@@ -30,6 +30,10 @@ public class MapSalzdahlumer extends AppCompatActivity {
     private InputStream inputStream;
     private List<String> salzdahlumerList;
 
+    /**
+     * Initialize the activity
+     * @param savedInstanceState the user's current state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Gets the csv
@@ -47,13 +51,20 @@ public class MapSalzdahlumer extends AppCompatActivity {
 
         setActions();
         setImage();
+        setActionBar();
+    }
 
-        //Puts an Image to the Action Bar
+    /**
+     * Puts an image into the actionbar and removes the appname
+     */
+    private void setActionBar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
+            //Puts an image into the actionbar
             actionBar.setDisplayShowHomeEnabled(true);
             actionBar.setIcon(R.mipmap.ic_maps);
-            actionBar.setDisplayShowTitleEnabled(false); // deletes the text from action bar
+            //Removes the text in action bar
+            actionBar.setDisplayShowTitleEnabled(false);
             Log.i(this.getClass().toString(), String.valueOf(R.string.actionBarEnabled));
         } else {
             Log.i(this.getClass().toString(), String.valueOf(R.string.actionBarDisabled));

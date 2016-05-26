@@ -20,6 +20,10 @@ public class AfterSchool extends AppCompatActivity {
     private Button btnClubs;
     private Button btnRestaurants;
 
+    /**
+     * Initialize the activity
+     * @param savedInstanceState the user's current state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -31,10 +35,16 @@ public class AfterSchool extends AppCompatActivity {
         btnRestaurants = (Button) findViewById(R.id.buttonRestaurant);
 
         setActions();
+        setActionBar();
+    }
 
-        //Puts an Image to the Action Bar
+    /**
+     * Puts an image into the actionbar and removes the appname
+     */
+    private void setActionBar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
+            // Puts an Image to the Action Bar
             actionBar.setDisplayShowHomeEnabled(true);
             actionBar.setIcon(R.mipmap.ic_after_school);
             // Removes the text in Action bar

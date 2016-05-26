@@ -32,7 +32,10 @@ public class Holidays extends AppCompatActivity {
     private TextView textViewHoliday;
     private TableLayout table;
 
-
+    /**
+     * Initialize the activity
+     * @param savedInstanceState the user's current state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Gets the CSV
@@ -52,9 +55,14 @@ public class Holidays extends AppCompatActivity {
 
         fillTable();
 
-        //Puts an Image to the Action Bar
+        setActionBar();
+    }
+
+    //Puts an image into the actionbar and removes the appname
+    private void setActionBar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
+            //Puts an image into the actionbar
             actionBar.setDisplayShowHomeEnabled(true);
             actionBar.setIcon(R.mipmap.ic_holidays);
             //Removes the text in action bar

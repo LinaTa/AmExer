@@ -29,6 +29,10 @@ public class Sport extends AppCompatActivity {
     private List<String> sportsList;
     private InputStream inputStream;
 
+    /**
+     * Initialize the activity
+     * @param savedInstanceState the user's current state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Gets the csv
@@ -44,7 +48,13 @@ public class Sport extends AppCompatActivity {
         fillList();
         sportsListView = (ListView) findViewById(R.id.sportListView);
         setActions();
+        setActionBar();
+    }
 
+    /**
+     * Puts an image into the actionbar and removes the appname
+     */
+    private void setActionBar() {
         //Puts an Image to the Action Bar
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -77,7 +87,7 @@ public class Sport extends AppCompatActivity {
     }
 
     /**
-     * Creates the Link by clicking on list-item(Sport-course)
+     * Creates the Link by clicking on list-item(sportcourse)
      */
     private void setActions() {
         sportsListView.setOnItemClickListener(new ListView.OnItemClickListener() {

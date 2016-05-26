@@ -13,7 +13,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_profs"
+        android:id="@+id/editText_profs_informatik"
         android:background="@color/wolfenbuettelBlue"
         android:text="@string/profs"
         android:focusable="false"
@@ -24,16 +24,102 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <ListView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/listView_profs"
-        android:choiceMode="singleChoice"
-        android:divider="@color/backgroundOstfalia"
-        android:dividerHeight="4dp"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/editText_profs"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_below="@+id/editText_profs_informatik">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_electrical_engineering"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/round_shape"
+            android:textColor="#ffffff"
+            android:textStyle="normal"
+            android:width="200dp"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            android:height="60dp"
+            android:layout_margin="10dp"
+            android:text="@string/electrical_engineering" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/informatik"
+            android:id="@+id/button_informatik"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/round_shape"
+            android:textColor="#ffffff"
+            android:textStyle="normal"
+            android:width="200dp"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            android:height="60dp"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/machine_engineering"
+            android:id="@+id/button_machine_engineering"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/round_shape"
+            android:textColor="#ffffff"
+            android:textStyle="normal"
+            android:width="200dp"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            android:height="60dp"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/law"
+            android:id="@+id/button_law"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/round_shape"
+            android:textColor="#ffffff"
+            android:textStyle="normal"
+            android:width="200dp"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            android:height="60dp"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/social_work"
+            android:id="@+id/button_social_work"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/round_shape"
+            android:textColor="#ffffff"
+            android:textStyle="normal"
+            android:width="200dp"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            android:height="60dp"
+            android:layout_margin="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/supply_engineering"
+            android:id="@+id/button_supply_engineering"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/round_shape"
+            android:textColor="#ffffff"
+            android:textStyle="normal"
+            android:width="200dp"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            android:height="60dp"
+            android:layout_margin="10dp" />
+    </LinearLayout>
 
 </RelativeLayout>

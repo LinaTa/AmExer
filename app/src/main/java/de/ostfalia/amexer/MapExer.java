@@ -31,6 +31,10 @@ public class MapExer extends AppCompatActivity {
     private InputStream inputStream;
     private List<String> exerList;
 
+    /**
+     * Initialize the activity
+     * @param savedInstanceState the user's current state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Gets the csv
@@ -47,15 +51,19 @@ public class MapExer extends AppCompatActivity {
         imageViewMapExer = (ImageView) findViewById(R.id.imageViewMapExer);
 
         setActions();
-        setImage();
+        setMapImage();
+        setActionBar();
+    }
 
-        //Puts an Image to the Action Bar
+    //Puts an image into the actionbar and removes the appname
+    private void setActionBar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
+            //Puts an image into the actionbar
             actionBar.setDisplayShowHomeEnabled(true);
             actionBar.setIcon(R.mipmap.ic_maps);
-            // deletes the text from action bar
-            actionBar.setDisplayShowTitleEnabled(false);// Removes text from the Action bar
+            //Removes the text in actionbar
+            actionBar.setDisplayShowTitleEnabled(false);
             Log.i(this.getClass().toString(), String.valueOf(R.string.actionBarEnabled));
         } else {
             Log.i(this.getClass().toString(), String.valueOf(R.string.actionBarDisabled));
@@ -65,7 +73,7 @@ public class MapExer extends AppCompatActivity {
     /**
      * Sets the Map-Image in landscape or portrait-orientation
      */
-    private void setImage() {
+    private void setMapImage() {
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             imageViewMapExer.setImageResource(R.drawable.map_exer_quer);
         } else {

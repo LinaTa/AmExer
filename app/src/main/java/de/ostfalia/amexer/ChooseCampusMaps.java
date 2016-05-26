@@ -19,6 +19,10 @@ public class ChooseCampusMaps extends AppCompatActivity {
     private Button campusAmExer;
     private Button campusSalzdahlumer;
 
+    /**
+     * Initialize the activity
+     * @param savedInstanceState the user's current state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,15 +31,20 @@ public class ChooseCampusMaps extends AppCompatActivity {
         campusAmExer = (Button) findViewById(R.id.campusExer);
         campusSalzdahlumer = (Button) findViewById(R.id.campusSalzdahlumer);
         setActions();
+        setActionBar();
+    }
 
-
-        //Puts an Image to the Action Bar
+    /**
+     * Puts an image into the actionbar and removes the appname
+     */
+    private void setActionBar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
+            // puts an image into the actionbar
             actionBar.setDisplayShowHomeEnabled(true);
             actionBar.setIcon(R.mipmap.ic_maps);
             // removes the text in action-bar
-            actionBar.setDisplayShowTitleEnabled(false);// Removes text from the Action bar
+            actionBar.setDisplayShowTitleEnabled(false);
             Log.i(this.getClass().toString(), String.valueOf(R.string.actionBarEnabled));
         } else {
             Log.i(this.getClass().toString(), String.valueOf(R.string.actionBarDisabled));

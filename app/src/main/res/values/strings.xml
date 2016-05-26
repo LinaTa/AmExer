@@ -85,8 +85,32 @@
     <string name="campus_salzdahlumer_data.csv">campus_salzdahlumer_data.csv</string>
 
 
-    <!--   ......................... SPORTS ......................... -->
-    <string name="profs.csv">profs.csv</string>
+    <!--   ......................... Professoren ......................... -->
+    <string name="tel">tel:</string>
+
+    <!-- Faculties -->
+    <string name="electrical_engineering">Elektrotechnik</string>
+    <string name="informatik">Informatik</string>
+    <string name="machine_engineering">Maschinenbau</string>
+    <string name="law">Recht</string>
+    <string name="social_work">Soziale Arbeit</string>
+    <string name="supply_engineering">Versorgungstechnik</string>
+
+    <string name="profs_electrical_engineering">Professoren - Elektrotechnik</string>
+    <string name="profs_informatik">Professoren - Informatik</string>
+    <string name="profs_machine_engineering">Professoren - Maschinenbau</string>
+    <string name="profs_law">Professoren - Recht</string>
+    <string name="profs_social_work">Professoren - Soziale Arbeit</string>
+    <string name="profs_supply_engineering">Professoren - Versorgungstechnik</string>
+
+    <!-- Profs-Data -->
+    <string name="profs_electrical_engineering_csv">profs_electrical_engineering.csv</string>
+    <string name="profs_informatik_csv">profs_informatik.csv</string>
+    <string name="profs_law_csv">profs_law.csv</string>
+    <string name="profs_machine_engineering_csv">profs_machine_engineering.csv</string>
+    <string name="profs_social_work_csv">profs_social_work.csv</string>
+    <string name="profs_supply_engineering_csv">profs_supply_engineering.csv</string>
+
 
     <!--   ......................... SPORTS ......................... -->
     <string name="sports_data.csv">sports_data.csv</string>

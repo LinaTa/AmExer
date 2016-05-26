@@ -86,6 +86,48 @@
                 android:value=".AmExer" />
         </activity>
         <activity
+            android:name=".ProfsElectricalEngineering"
+            android:parentActivityName=".Profs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Profs" />
+        </activity>
+        <activity
+            android:name=".ProfsInformatik"
+            android:parentActivityName=".Profs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Profs" />
+        </activity>
+        <activity
+            android:name=".ProfsLaw"
+            android:parentActivityName=".Profs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Profs" />
+        </activity>
+        <activity
+            android:name=".ProfsMachineEngineering"
+            android:parentActivityName=".Profs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Profs" />
+        </activity>
+        <activity
+            android:name=".ProfsSocialWork"
+            android:parentActivityName=".Profs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Profs" />
+        </activity>
+        <activity
+            android:name=".ProfsSupplyEngineering"
+            android:parentActivityName=".Profs">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Profs" />
+        </activity>
+        <activity
             android:name=".ChooseCampusMaps"
             android:parentActivityName=".AmExer">
             <meta-data
