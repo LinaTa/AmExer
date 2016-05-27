@@ -45,7 +45,7 @@
             android:layout_centerHorizontal="true"
             android:focusableInTouchMode="true"
             android:height="60dp"
-            android:layout_margin="10dp" />
+            android:layout_margin="20dp" />
 
         <Button
             android:layout_width="wrap_content"
