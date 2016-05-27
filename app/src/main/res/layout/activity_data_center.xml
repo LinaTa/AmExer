@@ -45,7 +45,8 @@
                 android:textSize="20sp"
                 android:textIsSelectable="false"
                 android:paddingTop="10dp"
-                android:paddingBottom="10dp" />
+                android:paddingBottom="10dp"
+                style="0.20" />
 
             <TableLayout
                 android:layout_width="wrap_content"
@@ -277,11 +278,6 @@
             </TableLayout>
 
         </LinearLayout>
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/scrollView3" />
 
     </FrameLayout>
 
