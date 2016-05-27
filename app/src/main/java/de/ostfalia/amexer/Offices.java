@@ -1,5 +1,4 @@
 package de.ostfalia.amexer;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,16 +8,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 /**
- * the class generates an action after pressing a button from offices_activity
+ * The class generates an action after pressing a button from offices_activity
  * and reference every button to a different website from Ostfalia.de
- *
  *
  * @author Natasza Szczypien
  */
 
 public class Offices extends AppCompatActivity {
 
-    /* Aktivity objects */
+    /* Activity objects */
     private Button internationalOffice;
     private Button immatrikulationsbuero;
     private Button careerService;
@@ -26,14 +24,11 @@ public class Offices extends AppCompatActivity {
     private Button studienfoerderung;
     private Button studienberatung;
 
-    Context context;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offices);
-        context = this;
 
         setImageActionBar();
         initActivityObjects();
@@ -44,12 +39,12 @@ public class Offices extends AppCompatActivity {
      * Initializing the aktivity buttons
      */
     private void initActivityObjects() {
-        internationalOffice = (Button) this.findViewById(R.id.campusExer);
-        immatrikulationsbuero = (Button) this.findViewById(R.id.campusSalzdahlumer);
-        careerService = (Button) this.findViewById(R.id.Career_Service);
-        serviceBueros = (Button) this.findViewById(R.id.Servicebueros);
-        studienfoerderung = (Button) this.findViewById(R.id.Studienfoerderung);
-        studienberatung = (Button) this.findViewById(R.id.studienberatung);
+        internationalOffice = (Button) this.findViewById(R.id.button_international_office);
+        immatrikulationsbuero = (Button) this.findViewById(R.id.button_immatrikulationsbuero);
+        careerService = (Button) this.findViewById(R.id.button_career_Service);
+        serviceBueros = (Button) this.findViewById(R.id.button_servicebueros);
+        studienfoerderung = (Button) this.findViewById(R.id.button_studienfoerderung);
+        studienberatung = (Button) this.findViewById(R.id.button_studienberatung);
     }
 
     /**
@@ -71,8 +66,7 @@ public class Offices extends AppCompatActivity {
         internationalOffice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse(getString(R.string.international_office));
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.international_office_url)));
                 startActivity(intent);
             }
         });
@@ -80,8 +74,7 @@ public class Offices extends AppCompatActivity {
         immatrikulationsbuero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse(getString(R.string.immatrikulations_buero));
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                Intent intent = new Intent(Intent.ACTION_VIEW,  Uri.parse(getString(R.string.immatrikulations_buero_url)));
                 startActivity(intent);
             }
         });
@@ -89,8 +82,7 @@ public class Offices extends AppCompatActivity {
         careerService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse(getString(R.string.career_service));
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.career_service_url)));
                 startActivity(intent);
             }
         });
@@ -98,8 +90,7 @@ public class Offices extends AppCompatActivity {
         serviceBueros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse(getString(R.string.service_bueros));
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.service_bueros_url)));
                 startActivity(intent);
             }
         });
@@ -107,8 +98,7 @@ public class Offices extends AppCompatActivity {
         studienfoerderung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse(getString(R.string.studienforderung));
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.studienforderung_url)));
                 startActivity(intent);
             }
         });
@@ -116,8 +106,7 @@ public class Offices extends AppCompatActivity {
         studienberatung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse(getString(R.string.studienberatung));
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.studienberatung_url)));
                 startActivity(intent);
             }
         });

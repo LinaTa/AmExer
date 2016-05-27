@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -103,22 +104,26 @@ public class FoodAmExer extends AppCompatActivity {
 
             if (currentHour >= solferinoOpenHour && currentHour < solferinoCloseHour) {
                 solferinoBigText.setText(R.string.open, TextView.BufferType.EDITABLE);
-                solferinoBigText.setTextColor(Color.GREEN);
-                solferinoSmallText.setText(getString(R.string.offen_bis) + " " + solferinoCloseHour + getString(R.string.zero_minute));
+                solferinoBigText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaGreen));
+                String str = getString(R.string.offen_bis) + " " + solferinoCloseHour + getString(R.string.zero_minute);
+                solferinoSmallText.setText(str);
             } else {
                 solferinoBigText.setText(R.string.closed, TextView.BufferType.EDITABLE);
-                solferinoBigText.setTextColor(Color.RED);
-                solferinoSmallText.setText(getString(R.string.wir_sehen_uns) + " " + solferinoOpenHour + getString(R.string.zero_minute));
+                solferinoBigText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaRed));
+                String str = getString(R.string.wir_sehen_uns) + " " + solferinoOpenHour + getString(R.string.zero_minute);
+                solferinoSmallText.setText(str);
             }
 
             if (currentHour >= limesOpenHour && currentHour < limesCloseHour) {
                 limesBigText.setText(R.string.open, TextView.BufferType.EDITABLE);
-                limesBigText.setTextColor(Color.GREEN);
-                limesSmallText.setText(getString(R.string.offen_bis) + " " + limesCloseHour + getString(R.string.zero_minute));
+                limesBigText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaGreen));
+                String str = getString(R.string.offen_bis) + " " + limesCloseHour + getString(R.string.zero_minute);
+                limesSmallText.setText(str);
             } else {
                 limesBigText.setText(R.string.closed, TextView.BufferType.EDITABLE);
-                limesBigText.setTextColor(Color.RED);
-                limesSmallText.setText(getString(R.string.wir_sehen_uns) + " " + limesOpenHour + getString(R.string.zero_minute));
+                limesBigText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaRed));
+                String str = getString(R.string.wir_sehen_uns) + " " + limesOpenHour + getString(R.string.zero_minute);
+                limesSmallText.setText(str);
             }
         }
     }
@@ -137,7 +142,7 @@ public class FoodAmExer extends AppCompatActivity {
     }
 
     /**
-     * When the Image will be clicked, than a Browser with the Restaurant menu will be openned.
+     * When the Image will be clicked, than a Browser with the Restaurant menu will be opened.
      */
     private void setButtonAction() {
 
@@ -161,7 +166,7 @@ public class FoodAmExer extends AppCompatActivity {
     }
 
     /**
-     * Gets the openning and closing times from a CSV File and assings it to
+     * Gets the opening and closing times from a CSV File and assings it to
      * private variables.
      *
      */
