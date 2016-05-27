@@ -15,59 +15,44 @@
         android:layout_height="wrap_content"
         android:id="@+id/editText_library"
         android:background="@color/wolfenbuettelBlue"
-        android:text="Rechenzentrum"
+        android:text="@string/dataCenter"
         android:focusable="false"
         android:textColor="#ffffff"
-        android:layout_row="0"
-        android:layout_column="0"
         android:inputType="none"
-        android:layout_columnSpan="2"
         android:gravity="center"
-        android:layout_gravity="left|top"
         android:layout_centerHorizontal="true" />
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:gravity="center_horizontal"
-            android:layout_marginTop="24dp"
-            android:layout_below="@+id/editText_library"
-            android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal|top">
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Offen"
+                android:text=""
                 android:id="@+id/data_center_text"
-                android:layout_column="0"
                 android:gravity="center"
                 android:background="@drawable/cell_shape"
                 android:textColor="@color/ostfaliaGreen"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textIsSelectable="false"
                 android:paddingTop="10dp"
-                android:layout_span="4"
-                android:paddingBottom="10dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="20dp" />
+                android:paddingBottom="10dp" />
 
             <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:paddingTop="5dp"
-                android:layout_gravity="center_horizontal">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                </TableRow>
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.80">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -82,18 +67,18 @@
                         android:layout_column="0"
                         android:gravity="center"
                         android:background="@drawable/cell_shape"
-                        android:height="30dp" />
+                        android:height="25dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Semester"
+                        android:text="@string/semester"
                         android:id="@+id/textView2"
                         android:layout_column="1"
                         android:background="@drawable/cell_shape"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:height="30dp"
+                        android:height="25dp"
                         android:layout_span="3" />
 
                 </TableRow>
@@ -106,33 +91,39 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="   Mo   "
+                        android:text="@string/monday"
                         android:id="@+id/textView4"
                         android:layout_column="0"
                         android:background="@drawable/cell_shape"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="          09:00 - 12:00          "
+                        android:text="@string/data_center_9_12"
                         android:id="@+id/Mo_Re1"
                         android:layout_column="1"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="          13:00 - 15:30          "
+                        android:text="@string/data_center_13_15"
                         android:id="@+id/Mo_Re2"
                         android:layout_column="3"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp"
+                        android:paddingRight="15dp"
+                        android:paddingLeft="15dp" />
                 </TableRow>
 
                 <TableRow
@@ -143,33 +134,33 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Di"
+                        android:text="@string/Tue"
                         android:id="@+id/textView7"
                         android:layout_column="0"
                         android:background="@drawable/cell_shape"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="          09:00 - 12:00          "
+                        android:text="@string/data_center_9_12"
                         android:id="@+id/Tue_Re1"
                         android:layout_column="1"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="          13:00 - 15:30          "
+                        android:text="@string/data_center_13_15"
                         android:id="@+id/Tue_Re2"
                         android:layout_column="3"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp" />
                 </TableRow>
 
                 <TableRow
@@ -180,33 +171,33 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Mi"
+                        android:text="@string/We"
                         android:id="@+id/textView10"
                         android:layout_column="0"
                         android:background="@drawable/cell_shape"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="          09:00 - 12:00          "
+                        android:text="@string/data_center_9_12"
                         android:id="@+id/We_Re1"
                         android:layout_column="1"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="          13:00 - 15:30          "
+                        android:text="@string/data_center_13_15"
                         android:id="@+id/We_Re2"
                         android:layout_column="3"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp" />
                 </TableRow>
 
                 <TableRow
@@ -217,33 +208,33 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Do"
+                        android:text="@string/Thu"
                         android:id="@+id/textView13"
                         android:layout_column="0"
                         android:background="@drawable/cell_shape"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="          09:00 - 12:00          "
+                        android:text="@string/data_center_9_12"
                         android:id="@+id/Thu_Re1"
                         android:layout_column="1"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="          13:00 - 15:30          "
+                        android:text="@string/data_center_13_15"
                         android:id="@+id/Thu_Re2"
                         android:layout_column="3"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp" />
                 </TableRow>
 
                 <TableRow
@@ -254,23 +245,23 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Fr"
+                        android:text="@string/Fr"
                         android:id="@+id/textView14"
                         android:layout_column="0"
                         android:background="@drawable/cell_shape"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="          09:00 - 12:00          "
+                        android:text="@string/data_center_9_12"
                         android:id="@+id/Fr_Re1"
                         android:layout_column="1"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -279,7 +270,7 @@
                         android:layout_column="3"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="30dp" />
+                        android:height="28dp" />
                 </TableRow>
 
             </TableLayout>
