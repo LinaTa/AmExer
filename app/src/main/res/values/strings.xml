@@ -51,12 +51,12 @@
     <!-- Mensa -->
     <string name="mensa">Mensa</string>
     <string name="mensa_url">http://www.stw-on.de/wolfenbuettel/essen/menus/mensa-ostfalia</string>
-    <string name="mensa_csv">mensa_data.csv</string>
+    <string name="mensa_csv">mensa.csv</string>
 
     <!-- Solferino -->
     <string name="solferino">Solferino</string>
     <string name="solferino_image">solferino_image</string>
-    <string name="solferino_limes_csv">solferino_limes_data.csv</string>
+    <string name="solferino_limes_csv">solferino_limes.csv</string>
     <string name="solferino_url">http://www.kv.drk-kv-wf.de/fileadmin/user_upload/aktuelles/speisepläne/menu-solferino.pdf</string>
 
     <!-- Limes -->
@@ -69,11 +69,11 @@
     <string name="lectureTime">Vorlesungen finden statt</string>
     <string name="holiday">Feiertag</string>
     <string name="date">Datum</string>
-    <string name="holidays_data.csv">holidays_data.csv</string>
+    <string name="holidays_data.csv">holidays.csv</string>
 
 
     <!--   ......................... LIBRARY & DATA CENTER ......................... -->
-    <string name="library_csv">semester_data.csv</string>
+    <string name="library_csv">semester.csv</string>
     <string name="semester">Semester</string>
     <string name="data_center_9_12">09:00 – 12:00</string>
     <string name="data_center_13_15">13:00 – 15:30</string>
@@ -95,8 +95,8 @@
     <string name="buildingsExer">Gebäude am Exer:</string>
     <string name="buildingsSalzdahlumer">Gebäude an der Salzdahlumer:</string>
 
-    <string name="campus_exer_data.csv">campus_exer_data.csv</string>
-    <string name="campus_salzdahlumer_data.csv">campus_salzdahlumer_data.csv</string>
+    <string name="campus_exer_data.csv">campus_exer_buildings.csv</string>
+    <string name="campus_salzdahlumer_data.csv">campus_salzdahlumer_buildings.csv</string>
 
 
     <!--   ......................... OFFICES ......................... -->
@@ -144,7 +144,7 @@
 
 
     <!--   ......................... SPORTS ......................... -->
-    <string name="sports_data.csv">sports_data.csv</string>
+    <string name="sports_data.csv">sport_courses.csv</string>
     <string name="sportsLink">https://www.hochschulsport.ostfalia.de/angebote/aktueller_zeitraum/_</string>
     <string name="limes_image">limes_image</string>
     <string name="mensa_button">mensa_button</string>
