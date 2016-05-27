@@ -1,10 +1,14 @@
 package de.ostfalia.amexer;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.io.IOException;
@@ -32,10 +36,15 @@ public class Library extends AppCompatActivity {
     /* Activity-text that says if library is "OFFEN" or "GESCHLOSSEN" */
     private TextView libraryText;
 
-    //  private InputStream iS;
+    /* Button for telephone*/
+    private ImageButton telephone;
+
+    /* Button for email*/
+    private ImageButton email;
 
     private Calendar semesterStart;
     private Calendar semesterEnde;
+
 
     Context context;
 
@@ -58,6 +67,7 @@ public class Library extends AppCompatActivity {
 
         setImageActionBar();
         initActivityObjects();
+        setActions();
         setAvailibility();
 
     }
@@ -67,6 +77,8 @@ public class Library extends AppCompatActivity {
      */
     private void initActivityObjects() {
         libraryText = (TextView) findViewById(R.id.library_text);
+        telephone = (ImageButton) findViewById(R.id.library_phone);
+        email = (ImageButton) findViewById(R.id.library_email);
     }
 
     /**
@@ -201,7 +213,7 @@ public class Library extends AppCompatActivity {
     /**
      * Checks if the the current date is in semester time
      *
-     * @param year current year
+     * @param year  current year
      * @param month current moth
      * @return semester time or not
      */
@@ -229,5 +241,29 @@ public class Library extends AppCompatActivity {
 
         semesterStart = dates.get(0);
         semesterEnde = dates.get(1);
+    }
+
+    private void setActions() {
+
+        telephone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri number = Uri.parse("tel:05331/9398100");
+                Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
+                startActivity(callIntent);
+            }
+        });
+
+        email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent;
+                sendIntent = new Intent(Intent.ACTION_SEND);
+                sendIntent.setType("message/rfc822");
+                sendIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"information-wf@ostfalia.de"});
+                startActivity(Intent.createChooser(sendIntent, "Send Mail"));
+            }
+        });
+
     }
 }
