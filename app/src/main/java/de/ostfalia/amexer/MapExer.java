@@ -23,7 +23,7 @@ import de.ostfalia.amexer.entries.CSVReader;
 /**
  * Activity for showing a map of the exercampus
  * By clicking the map it shows a popup with informations of the map
- * The class gets the informations of the map form the campus_exer_data.csv
+ * The class gets the informations of the map form the campus_exer_buildings.csv
  * @author Lina Tacke
  */
 public class MapExer extends AppCompatActivity {

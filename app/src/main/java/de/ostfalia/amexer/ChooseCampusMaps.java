@@ -12,7 +12,7 @@ import android.widget.Button;
  * Activity for choosing campus (exer or salzdahlumer)
  * It shows two buttons (exer-campus and salzdahlumer-campus)
  * By Clicking a button it opens the map of the choosen campus.
- * The class gets the informations of the map form the campus_salzdahlumer_data.csv
+ * The class gets the informations of the map form the campus_salzdahlumer_buildings.csv
  * @author Lina Tacke
  */
 public class ChooseCampusMaps extends AppCompatActivity {

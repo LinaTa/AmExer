@@ -1,5 +1,6 @@
 package de.ostfalia.amexer;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
@@ -86,12 +87,16 @@ public class Holidays extends AppCompatActivity {
             rowHoliday.setGravity(Gravity.CENTER_HORIZONTAL);
 
             TextView name = new TextView(this);
-            name.setBackground(getDrawable(R.drawable.cell_shape));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                name.setBackground(getDrawable(R.drawable.cell_shape));
+            }
             name.setGravity(Gravity.CENTER_HORIZONTAL);
             name.setLayoutParams(lp);
 
             TextView date = new TextView(this);
-            date.setBackground(getDrawable(R.drawable.cell_shape));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                date.setBackground(getDrawable(R.drawable.cell_shape));
+            }
             date.setGravity(Gravity.CENTER_HORIZONTAL);
             date.setLayoutParams(lp);
 

@@ -16,7 +16,7 @@ import java.util.GregorianCalendar;
 import de.ostfalia.amexer.entries.CSVReader;
 import de.ostfalia.amexer.entries.TableHelper;
 /**
- * This class uses a CSV-File 'semester_data.csv' to get the Semester-end-date and Semester-start-date.
+ * This class uses a CSV-File 'semester.csv' to get the Semester-end-date and Semester-start-date.
  * After the Activity starts, the CVS-File will be loaded. The class gets the current
  * Date and Time, checks if Today is a workDay or Weekend.
  * If it is weekend The Activity shows a red "Geschlossen".

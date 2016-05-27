@@ -22,7 +22,7 @@ public class TableHelper {
         /* parses the rowTime*/
         rowTime1 = rowTime1.trim();
         ArrayList<Integer> tempList = new ArrayList<>(); // [00:00-00:00]
-        String[] twoTemps = rowTime1.split("-");
+        String[] twoTemps = rowTime1.split("–");
         String[] timeOne = twoTemps[0].split(":");
         String[] timeTwo = twoTemps[1].split(":");
 

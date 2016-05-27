@@ -20,7 +20,7 @@ import java.util.Calendar;
 import de.ostfalia.amexer.entries.CSVReader;
 
 /**
- * This class uses a CSV-File 'mensa_data.csv' to get the open and close time from the Mensa.
+ * This class uses a CSV-File 'mensa.csv' to get the open and close time from the Mensa.
  * After the Activity starts, the CVS-File will be loaded. The class gets the current
  * Date and Time, checks if Today is a workDay or Weekend.
  * If it is weekend The Activity shows a red "Geschlossen".
@@ -92,11 +92,13 @@ public class FoodAmMain extends AppCompatActivity {
             if (currentHour >= mensaOpenHour && currentHour <= mensaCloseHour) {
                 mensaBigText.setText(getString(R.string.open), TextView.BufferType.EDITABLE);
                 mensaBigText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaGreen));
-                mensaSmallText.setText(getString(R.string.open_till)  + " " + mensaCloseHour + getString(R.string.zero_minute));
+                String str = getString(R.string.open_till)  + " " + mensaCloseHour + getString(R.string.zero_minute);
+                mensaSmallText.setText(str);
             } else {
                 mensaBigText.setText(getString(R.string.closed), TextView.BufferType.EDITABLE);
                 mensaBigText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaRed));
-                mensaSmallText.setText(getString(R.string.see_you_at) +" "+ mensaOpenHour + getString(R.string.zero_minute));
+                String str = getString(R.string.see_you_at) +" "+ mensaOpenHour + getString(R.string.zero_minute);
+                mensaSmallText.setText(str);
             }
         }
     }
@@ -111,7 +113,7 @@ public class FoodAmMain extends AppCompatActivity {
     }
 
     /**
-     * When the Image will be clicked, than a Browser with the Restaurant menu will be openned.
+     * When the Image will be clicked, than a Browser with the Restaurant menu will be opened.
      */
     private void setButtonAction() {
         mensaButton.setOnClickListener(new View.OnClickListener() {
@@ -125,7 +127,7 @@ public class FoodAmMain extends AppCompatActivity {
     }
 
     /**
-     * Gets the openning and closing times from a CSV File and assings it to
+     * Gets the opening and closing times from a CSV File and assings it to
      * private variables.
      *
      */

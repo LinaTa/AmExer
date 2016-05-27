@@ -6,7 +6,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
- * Created by Lina on 02.05.2016.
+ * Reads a csv-data and puts the values it in a arraylist
+ * @Author Lina Tacke
  */
 public class CSVReader {
     private ArrayList<String> data = new ArrayList<>();

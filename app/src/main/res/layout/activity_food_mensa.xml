@@ -42,10 +42,11 @@
                     android:layout_width="150dp"
                     android:layout_height="124dp"
                     android:id="@+id/mensa_button"
-                    android:background="@mipmap/mensa1"
+                    android:background="@mipmap/ic_mensa"
                     android:clickable="true"
                     android:layout_gravity="left|center_vertical"
-                    android:adjustViewBounds="false" />
+                    android:adjustViewBounds="false"
+                    android:contentDescription="@string/mensa_button" />
             </FrameLayout>
 
             <LinearLayout

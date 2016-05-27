@@ -21,7 +21,7 @@ import java.util.Calendar;
 import de.ostfalia.amexer.entries.CSVReader;
 
 /**
- * This class uses a CSV-File 'solferino_limes_data.csv' to get the open and close time from the Mensa.
+ * This class uses a CSV-File 'solferino_limes.csv' to get the open and close time from the Mensa.
  * After the Activity starts, the CVS-File will be loaded. The class gets the current
  * Date and Time, checks if Today is a workDay or Weekend.
  * If it is weekend The Activity shows a red "Geschlossen".
