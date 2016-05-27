@@ -8,8 +8,7 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     tools:context=".Library"
-    android:background="@color/backgroundOstfalia"
-    android:gravity="center_horizontal">
+    android:background="@color/backgroundOstfalia">
 
     <EditText
         android:layout_width="match_parent"
@@ -21,26 +20,27 @@
         android:textColor="#ffffff"
         android:inputType="none"
         android:gravity="center"
-
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp" />
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp">
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp"
+        android:paddingTop="2dp">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:layout_gravity="center_horizontal|top">
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@string/open"
                 android:id="@+id/library_text"
-
                 android:gravity="center"
                 android:background="@drawable/cell_shape"
                 android:textColor="@color/ostfaliaGreen"
@@ -48,9 +48,7 @@
                 android:textIsSelectable="false"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:layout_weight="0.20"
-                android:text="@string/open"
-                android:layout_gravity="top|center_horizontal" />
+                style="0.20" />
 
             <TableLayout
                 android:layout_width="wrap_content"
@@ -72,8 +70,6 @@
                         android:layout_column="0"
                         android:gravity="center"
                         android:background="@drawable/cell_shape"
-                        android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
                         android:height="25dp" />
 
                     <TextView
@@ -85,9 +81,9 @@
                         android:background="@drawable/cell_shape"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
-                        android:height="25dp" />
+                        android:height="25dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -98,9 +94,9 @@
                         android:background="@drawable/cell_shape"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:paddingTop="2dp"
-                        android:paddingBottom="2dp"
-                        android:height="25dp" />
+                        android:height="25dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp" />
                 </TableRow>
 
                 <TableRow
@@ -115,7 +111,6 @@
                         android:id="@+id/textView4"
                         android:layout_column="0"
                         android:background="@drawable/cell_shape"
-                        android:textStyle="bold"
                         android:gravity="center"
                         android:height="28dp"
                         android:paddingLeft="5dp"
@@ -129,9 +124,7 @@
                         android:layout_column="1"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="28dp"
-                        android:paddingLeft="25dp"
-                        android:paddingRight="25dp" />
+                        android:height="28dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -141,9 +134,7 @@
                         android:layout_column="3"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="28dp"
-                        android:paddingLeft="25dp"
-                        android:paddingRight="25dp" />
+                        android:height="28dp" />
                 </TableRow>
 
                 <TableRow
@@ -172,9 +163,7 @@
                         android:layout_column="1"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="28dp"
-                        android:paddingLeft="25dp"
-                        android:paddingRight="25dp" />
+                        android:height="28dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -184,9 +173,7 @@
                         android:layout_column="3"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="28dp"
-                        android:paddingLeft="25dp"
-                        android:paddingRight="25dp" />
+                        android:height="28dp" />
                 </TableRow>
 
                 <TableRow
@@ -215,9 +202,7 @@
                         android:layout_column="1"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="28dp"
-                        android:paddingLeft="25dp"
-                        android:paddingRight="25dp" />
+                        android:height="28dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -227,9 +212,7 @@
                         android:layout_column="3"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="28dp"
-                        android:paddingLeft="25dp"
-                        android:paddingRight="25dp" />
+                        android:height="28dp" />
                 </TableRow>
 
                 <TableRow
@@ -258,9 +241,7 @@
                         android:layout_column="1"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="28dp"
-                        android:paddingLeft="25dp"
-                        android:paddingRight="25dp" />
+                        android:height="28dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -270,9 +251,7 @@
                         android:layout_column="3"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="28dp"
-                        android:paddingLeft="25dp"
-                        android:paddingRight="25dp" />
+                        android:height="28dp" />
                 </TableRow>
 
                 <TableRow
@@ -301,9 +280,7 @@
                         android:layout_column="1"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="28dp"
-                        android:paddingLeft="25dp"
-                        android:paddingRight="25dp" />
+                        android:height="28dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -313,9 +290,7 @@
                         android:layout_column="3"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="28dp"
-                        android:paddingLeft="25dp"
-                        android:paddingRight="25dp" />
+                        android:height="28dp" />
                 </TableRow>
 
             </TableLayout>

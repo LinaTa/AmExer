@@ -20,22 +20,23 @@
         android:textColor="#ffffff"
         android:inputType="none"
         android:gravity="center"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp" />
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp">
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp"
+        android:paddingTop="2dp">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center_horizontal|top">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
 
             <TextView
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/open"
                 android:id="@+id/data_center_text"
