@@ -100,7 +100,7 @@ public class MapSalzdahlumer extends AppCompatActivity {
     private void showList() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setIcon(R.mipmap.ic_maps);
-        builder.setTitle(R.string.gebaudeSalzdahlumer);
+        builder.setTitle(R.string.buildingsSalzdahlumer);
 
         builder.setNegativeButton(
                 R.string.close,

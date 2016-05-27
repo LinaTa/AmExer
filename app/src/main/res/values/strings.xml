@@ -8,10 +8,10 @@
 
 
     <!--   ......................... OPEN CLOSE  ......................... -->
-    <string name="wochenende">Wochenende</string>
-    <string name="frei">Wir haben frei</string>
-    <string name="offen_bis">Offen bis</string>
-    <string name="wir_sehen_uns">Wir sind sehen uns um</string>
+    <string name="weekend">Wochenende</string>
+    <string name="free">Wir haben frei</string>
+    <string name="open_till">Offen bis</string>
+    <string name="see_you_at">Wir sind sehen uns um</string>
     <string name="zero_minute">:00</string>
     <string name="open">Offen</string>
     <string name="closed">Geschlossen</string>
@@ -75,12 +75,12 @@
     <!--   ......................... LIBRARY & DATA CENTER ......................... -->
     <string name="library_csv">semester_data.csv</string>
     <string name="semester">Semester</string>
-    <string name="data_center_9_12">09:00 - 12:00</string>
-    <string name="data_center_13_15">13:00 - 15:30</string>
+    <string name="data_center_9_12">09:00 – 12:00</string>
+    <string name="data_center_13_15">13:00 – 15:30</string>
     <string name="no_school">Vorlesungsfrei</string>
-    <string name="library_9_18">09:30 - 18:00</string>
-    <string name="library_9_15">09:30 - 15:00</string>
-    <string name="library_9_13">09:30 - 13:00</string>
+    <string name="library_9_18">09:30 – 18:00</string>
+    <string name="library_9_15">09:30 – 15:00</string>
+    <string name="library_9_13">09:30 – 13:00</string>
     <string name="monday">Mo</string>
     <string name="Tue">Di</string>
     <string name="We">Mi</string>
@@ -92,8 +92,8 @@
     <string name="exerMap">KarteExer</string>
     <string name="salzdahlumerMap">KarteSalzdahlumer</string>
 
-    <string name="gebaudeExer">Gebäude am Exer:</string>
-    <string name="gebaudeSalzdahlumer">Gebäude an der Salzdahlumer:</string>
+    <string name="buildingsExer">Gebäude am Exer:</string>
+    <string name="buildingsSalzdahlumer">Gebäude an der Salzdahlumer:</string>
 
     <string name="campus_exer_data.csv">campus_exer_data.csv</string>
     <string name="campus_salzdahlumer_data.csv">campus_salzdahlumer_data.csv</string>

@@ -99,7 +99,7 @@ public class MapExer extends AppCompatActivity {
     private void showList() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setIcon(R.mipmap.ic_maps);
-        builder.setTitle(R.string.gebaudeExer);
+        builder.setTitle(R.string.buildingsExer);
 
         builder.setNegativeButton(
                 R.string.close,

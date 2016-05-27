@@ -62,7 +62,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/solferino_text"
-                android:text="@string/offen_bis"
+                android:text="@string/open_till"
                 android:gravity="top|center"
                 android:layout_weight="0.30"
                 android:textSize="16sp" />
@@ -112,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/limes_text"
                 android:layout_weight="0.30"
-                android:text="@string/wir_sehen_uns"
+                android:text="@string/see_you_at"
                 android:gravity="top|center"
                 android:textSize="16sp" />
         </LinearLayout>

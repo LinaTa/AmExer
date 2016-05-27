@@ -91,12 +91,12 @@ public class FoodAmExer extends AppCompatActivity {
 
         if (dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY) {
 
-            solferinoBigText.setText(R.string.wochenende);
+            solferinoBigText.setText(R.string.weekend);
             solferinoBigText.setTextColor(Color.BLUE);
-            solferinoSmallText.setText(R.string.frei);
-            limesBigText.setText(R.string.wochenende);
+            solferinoSmallText.setText(R.string.free);
+            limesBigText.setText(R.string.weekend);
             limesBigText.setTextColor(Color.BLUE);
-            limesSmallText.setText(R.string.frei);
+            limesSmallText.setText(R.string.free);
 
         } else {
 
@@ -105,24 +105,24 @@ public class FoodAmExer extends AppCompatActivity {
             if (currentHour >= solferinoOpenHour && currentHour < solferinoCloseHour) {
                 solferinoBigText.setText(R.string.open, TextView.BufferType.EDITABLE);
                 solferinoBigText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaGreen));
-                String str = getString(R.string.offen_bis) + " " + solferinoCloseHour + getString(R.string.zero_minute);
+                String str = getString(R.string.open_till) + " " + solferinoCloseHour + getString(R.string.zero_minute);
                 solferinoSmallText.setText(str);
             } else {
                 solferinoBigText.setText(R.string.closed, TextView.BufferType.EDITABLE);
                 solferinoBigText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaRed));
-                String str = getString(R.string.wir_sehen_uns) + " " + solferinoOpenHour + getString(R.string.zero_minute);
+                String str = getString(R.string.see_you_at) + " " + solferinoOpenHour + getString(R.string.zero_minute);
                 solferinoSmallText.setText(str);
             }
 
             if (currentHour >= limesOpenHour && currentHour < limesCloseHour) {
                 limesBigText.setText(R.string.open, TextView.BufferType.EDITABLE);
                 limesBigText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaGreen));
-                String str = getString(R.string.offen_bis) + " " + limesCloseHour + getString(R.string.zero_minute);
+                String str = getString(R.string.open_till) + " " + limesCloseHour + getString(R.string.zero_minute);
                 limesSmallText.setText(str);
             } else {
                 limesBigText.setText(R.string.closed, TextView.BufferType.EDITABLE);
                 limesBigText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaRed));
-                String str = getString(R.string.wir_sehen_uns) + " " + limesOpenHour + getString(R.string.zero_minute);
+                String str = getString(R.string.see_you_at) + " " + limesOpenHour + getString(R.string.zero_minute);
                 limesSmallText.setText(str);
             }
         }

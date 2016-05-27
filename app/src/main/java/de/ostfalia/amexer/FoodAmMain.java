@@ -2,9 +2,9 @@ package de.ostfalia.amexer;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -81,9 +81,9 @@ public class FoodAmMain extends AppCompatActivity {
 
         if (dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY) {
 
-            mensaBigText.setText(R.string.wochenende);
-            mensaBigText.setTextColor(Color.BLUE);
-            mensaSmallText.setText(R.string.frei);
+            mensaBigText.setText(R.string.weekend);
+            mensaBigText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaBlue));
+            mensaSmallText.setText(R.string.free);
 
         } else {
 
@@ -91,12 +91,12 @@ public class FoodAmMain extends AppCompatActivity {
 
             if (currentHour >= mensaOpenHour && currentHour <= mensaCloseHour) {
                 mensaBigText.setText(getString(R.string.open), TextView.BufferType.EDITABLE);
-                mensaBigText.setTextColor(Color.GREEN);
-                mensaSmallText.setText(getString(R.string.offen_bis)  + " " + mensaCloseHour + getString(R.string.zero_minute));
+                mensaBigText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaGreen));
+                mensaSmallText.setText(getString(R.string.open_till)  + " " + mensaCloseHour + getString(R.string.zero_minute));
             } else {
                 mensaBigText.setText(getString(R.string.closed), TextView.BufferType.EDITABLE);
-                mensaBigText.setTextColor(Color.RED);
-                mensaSmallText.setText(getString(R.string.wir_sehen_uns) +" "+ mensaOpenHour + getString(R.string.zero_minute));
+                mensaBigText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaRed));
+                mensaSmallText.setText(getString(R.string.see_you_at) +" "+ mensaOpenHour + getString(R.string.zero_minute));
             }
         }
     }
