@@ -1,10 +1,14 @@
 package de.ostfalia.amexer;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -26,6 +30,11 @@ public class DataCenter extends AppCompatActivity {
     /* Activity-text that says if library is "OFFEN" or "GESCHLOSSEN" */
     private TextView dataCenterText;
 
+    /* Button for telephone*/
+    private ImageButton telephone;
+
+    /* Button for email*/
+    private ImageButton email;
     Context context;
 
     @Override
@@ -37,6 +46,7 @@ public class DataCenter extends AppCompatActivity {
 
         setImageActionBar();
         initActivityObjects();
+        setActions();
         setAvailibility();
     }
 
@@ -60,6 +70,8 @@ public class DataCenter extends AppCompatActivity {
      */
     private void initActivityObjects() {
         dataCenterText = (TextView) findViewById(R.id.data_center_text);
+        telephone = (ImageButton) findViewById(R.id.data_center_phone);
+        email = (ImageButton) findViewById(R.id.data_center_email);
     }
 
     /**
@@ -174,6 +186,28 @@ public class DataCenter extends AppCompatActivity {
             dataCenterText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaRed));
         }
     }
+    private void setActions() {
 
+        telephone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri number = Uri.parse("tel:05331 939 19990");
+                Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
+                startActivity(callIntent);
+            }
+        });
+
+        email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent;
+                sendIntent = new Intent(Intent.ACTION_SEND);
+                sendIntent.setType("message/rfc822");
+                sendIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"rz@ostfalia.de"});
+                startActivity(Intent.createChooser(sendIntent, "Send Mail"));
+            }
+        });
+
+    }
 
 }
