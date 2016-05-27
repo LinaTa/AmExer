@@ -1,6 +1,6 @@
 package de.ostfalia.amexer;
 import android.content.Context;
-import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -104,8 +104,8 @@ public class Library extends AppCompatActivity {
 
         if (dayType == Calendar.SATURDAY || dayType == Calendar.SUNDAY) {
 
-            libraryText.setText(R.string.closed);
-            libraryText.setTextColor(Color.RED);
+            libraryText.setText(R.string.weekend);
+            libraryText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaBlue));
             return true;
 
         }
@@ -190,10 +190,10 @@ public class Library extends AppCompatActivity {
 
         if (tableHelper.isOpen(openHour, openMinute, closeHour, closeMinute, currentHour, currentMinute)) {
             libraryText.setText(R.string.open);
-            libraryText.setTextColor(Color.GREEN);
+            libraryText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaGreen));
         } else {
             libraryText.setText(R.string.closed);
-            libraryText.setTextColor(Color.RED);
+            libraryText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaRed));
         }
         return true;
     }

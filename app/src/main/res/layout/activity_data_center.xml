@@ -37,7 +37,7 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="@string/open"
                 android:id="@+id/data_center_text"
                 android:gravity="center"
                 android:background="@drawable/cell_shape"
@@ -49,7 +49,7 @@
 
             <TableLayout
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:paddingTop="5dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.80">
@@ -270,7 +270,8 @@
                         android:layout_column="3"
                         android:background="@drawable/cell_shape"
                         android:gravity="center"
-                        android:height="28dp" />
+                        android:height="28dp"
+                        android:text="@string/free" />
                 </TableRow>
 
             </TableLayout>

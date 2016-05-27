@@ -1,6 +1,6 @@
 package de.ostfalia.amexer;
 import android.content.Context;
-import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -78,8 +78,8 @@ public class DataCenter extends AppCompatActivity {
 
         if (dayType == Calendar.SATURDAY || dayType == Calendar.SUNDAY) {
 
-            dataCenterText.setText(R.string.closed);
-            dataCenterText.setTextColor(Color.RED);
+            dataCenterText.setText(R.string.weekend);
+            dataCenterText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaBlue));
             return true;
 
         } else {
@@ -134,38 +134,45 @@ public class DataCenter extends AppCompatActivity {
                         assert dayRow2 != null;
                         rowTime2 = dayRow2.getText().toString();
                         break;
+
                 }
 
 
             } catch (NullPointerException e) {
                 e.printStackTrace();
             }
+
              /* Prepares the current library open-time-range  */
             ArrayList<Integer> openHours1 = tableHelper.prepareTime(rowTime1); // [openHour, openMinute, closeHour, closeMinute]
-            ArrayList<Integer> openHours2 = tableHelper.prepareTime(rowTime2); // [openHour, openMinute, closeHour, closeMinute]
-
-            //First column from row
-            int tempOpenHour1 = openHours1.get(0);
-            int tempOpenMinute1 = openHours1.get(1);
-            int tempCloseHour1 = openHours1.get(2);
-            int tempCloseMinute1 = openHours1.get(3);
-
-            //Second column from row
-            int tempOpenHour2 = openHours2.get(0);
-            int tempOpenMinute2 = openHours2.get(1);
-            int tempCloseHour2 = openHours2.get(2);
-            int tempCloseMinute2 = openHours2.get(3);
-
-            if (tableHelper.isOpen(tempOpenHour1, tempOpenMinute1, tempCloseHour1, tempCloseMinute1, currentHour, currentMinute) || tableHelper.isOpen(tempOpenHour2, tempOpenMinute2, tempCloseHour2, tempCloseMinute2, currentHour, currentMinute)) {
-                dataCenterText.setText(R.string.open);
-                dataCenterText.setTextColor(Color.GREEN);
-            } else {
-                dataCenterText.setText(R.string.closed);
-                dataCenterText.setTextColor(Color.RED);
+            check(currentHour, currentMinute, tableHelper, openHours1);
+            if(!rowTime2.equals(getString(R.string.free))){
+                ArrayList<Integer> openHours2 = tableHelper.prepareTime(rowTime2); // [openHour, openMinute, closeHour, closeMinute]
+                check(currentHour, currentMinute, tableHelper, openHours2);
             }
+
+
+// tableHelper.isOpen(tempOpenHour2, tempOpenMinute2, tempCloseHour2, tempCloseMinute2, currentHour, currentMinute)
+
         }
 
         return true;
+    }
+
+    private void check(int currentHour, int currentMinute, TableHelper tableHelper, ArrayList<Integer> openHours) {
+        //First column from row1
+        int tempOpenHour = openHours.get(0);
+        int tempOpenMinute = openHours.get(1);
+        int tempCloseHour = openHours.get(2);
+        int tempCloseMinute = openHours.get(3);
+
+
+        if (tableHelper.isOpen(tempOpenHour, tempOpenMinute, tempCloseHour, tempCloseMinute, currentHour, currentMinute) ) {
+            dataCenterText.setText(R.string.open);
+            dataCenterText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaGreen));
+        } else {
+            dataCenterText.setText(R.string.closed);
+            dataCenterText.setTextColor(ContextCompat.getColor(this, R.color.ostfaliaRed));
+        }
     }
 
 
